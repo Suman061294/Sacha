@@ -1,0 +1,103 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: white;
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.font-space {
+  font-family: var(--font-space-grotesk), sans-serif;
+}
+
+
+
+@font-face {
+  font-family: "Fractul";
+  src: url("../../public/fonts/fonnts.com-fractul-semibold.otf") format("opentype");
+  font-style: normal;
+  font-display: swap;
+}
+
+
+@font-face {
+  font-family: "Fractul-medium";
+  src: url("../../public/fonts/fonnts.com-fractul-light.otf") format("opentype");
+  font-style: normal;
+  font-display: swap;
+}
+
+
+@font-face {
+  font-family: "Rafaela Smith";
+  src: url("/raf/Rafaela Smith.otf") format("opentype");
+  font-style: normal;
+  font-display: swap;
+}
+
+.raf {
+  font-family: "Rafaela Smith", sans-serif;
+}
+
+
+.fractul-medium {
+  font-family: "Fractul", sans-serif;
+  font-weight: 600;
+}
+
+.fractul-light {
+  font-family: "Fractul-medium", sans-serif;
+  font-weight: 600;
+}
+
+
+.text-green-800 {
+    color: #007746;
+}
+
+.pro-gradient{
+  background: #F1EEE5;
+background: linear-gradient(51deg, rgba(241, 238, 229, 1) 0%, rgba(255, 255, 255, 1) 60%, rgba(212, 210, 203, 1) 100%);
+}
+
+
+@keyframes marquee {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+
+@keyframes marquee-reverse {
+  0% { transform: translateX(-50%); }
+  100% { transform: translateX(0%); }
+}
+
+.animate-marquee {
+  display: inline-flex;
+  animation: marquee 20s linear infinite;
+}
+
+.animate-marquee-reverse {
+  display: inline-flex;
+  animation: marquee-reverse 20s linear infinite;
+}
+
