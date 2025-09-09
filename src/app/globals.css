@@ -48,12 +48,34 @@ body {
 }
 
 
+
+@font-face {
+  font-family: "Fractul-thin";
+  src: url("../../public/fonts/fonnts.com-fractul-thin.otf") format("opentype");
+  font-style: normal;
+  font-display: swap;
+}
+
+
+
 @font-face {
   font-family: "Rafaela Smith";
   src: url("/raf/Rafaela Smith.otf") format("opentype");
   font-style: normal;
   font-display: swap;
 }
+
+
+
+@font-face {
+  font-family: "Fractul-bold";
+  src: url("../../public/fonts/fonnts.com-fractul-bold.otf") format("opentype");
+  font-style: normal;
+  font-display: swap;
+}
+
+
+
 
 .raf {
   font-family: "Rafaela Smith", sans-serif;
@@ -65,8 +87,19 @@ body {
   font-weight: 600;
 }
 
+.fractul-bold {
+  font-family: "Fractul-bold", sans-serif;
+  font-weight: 600;
+}
+
+
 .fractul-light {
   font-family: "Fractul-medium", sans-serif;
+  font-weight: 600;
+}
+
+.fractul-thin {
+  font-family: "Fractul-thin", sans-serif;
   font-weight: 600;
 }
 

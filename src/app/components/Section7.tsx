@@ -30,7 +30,7 @@ const item: Variants = {
 };
 
     return (
-        <section className="relative py-16 px-4 sm:py-20 sm:px-6 overflow-x-hidden">
+        <section className="relative py-12 px-4 sm:py-20 sm:px-6 overflow-x-hidden">
             <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
 
                 {/* Left Side Content */}
@@ -46,14 +46,14 @@ const item: Variants = {
                     }}
                     viewport={{ once: true, amount: 0.3 }}
                 >
-                    <h2 className="text-green-800 font-bold text-2xl text-left sm:text-5xl md:text-5xl leading-tight fractul-light mb-6">
+                    <h2 className="text-[#224936] font-bold text-5xl text-left sm:text-6xl leading-tight fractul-light mb-6">
 
                         <span className="fractul-medium"><em>Cleaned Ritual.<br />
                             Pure Love!</em></span><br />
 
                     </h2>
 
-                    <p className="text-green-800 font-normal text-xl text-left sm:text-xl md:text-xl leading-tight font-space mb-6">
+                    <p className="text-[#224936] font-normal text-xl text-left sm:text-2xl md:text-2xl leading-tight fractul-thin mb-6">
                         The <span className="fractul-medium"><em>same taste,</em></span> but <span className="fractul-medium"><em>100% organic!</em></span> <br />
                         That’s exactly what our hearts and <br />
                         bodies have been craving. </p>
@@ -61,7 +61,7 @@ const item: Variants = {
 
                     <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
                         <button className="px-10 sm:px-16 py-3 bg-[#224936] text-white font-medium shadow-lg hover:bg-white hover:text-[#224936] hover:border transition fractul-light text-lg sm:text-xl">JOIN THE GANG</button>
-                        <button className="px-10 sm:px-16 py-3 border border-[#224936] text-[#224936] font-medium shadow-lg hover:bg-[#224936] hover:text-white transition fractul-light text-lg sm:text-xl">BUY NOW</button>
+                        <button className="px-10 sm:px-16 py-3 border-2 border-[#224936] text-[#224936] font-bold shadow-lg hover:bg-[#224936] hover:text-white transition fractul-medium text-lg sm:text-xl">BUY NOW</button>
                     </div>
                 </motion.div>
 
@@ -73,12 +73,12 @@ const item: Variants = {
                     whileInView="show"
                     viewport={{ once: true, amount: 0.2 }}
                 >
-                    <div className="max-w-7xl mx-auto grid grid-cols-10 gap-4">
+                    <div className="max-w-7xl mx-auto grid grid-cols-10 gap-2 sm:gap-4">
                         {/* ---------- Row 1 ---------- */}
                         {/* Left (70%) */}
                         <motion.div
                             variants={item}
-                            className="col-span-7 h-40 sm:h-40 relative overflow-hidden"
+                            className="col-span-6 h-30 sm:h-40 relative overflow-hidden"
                         >
                             <Image
                                 src="/product/p-1.png"
@@ -91,7 +91,7 @@ const item: Variants = {
                         {/* Right (30%) */}
                         <motion.div
                             variants={item}
-                            className="col-span-3 h-40 sm:h-40 relative overflow-hidden"
+                            className="col-span-4 h-30 sm:h-40 relative overflow-hidden"
                         >
                             <Image
                                 src="/product/p-2.png"
@@ -105,7 +105,7 @@ const item: Variants = {
                         {/* Left Tall (50% width, full height) */}
                         <motion.div
                             variants={item}
-                            className="col-span-4 row-span-2 relative h-[400px] sm:h-[350px] overflow-hidden"
+                            className="col-span-4 row-span-2 relative h-[248px] sm:h-[350px] overflow-hidden"
                         >
                             <Image
                                 src="/product/p-3.png"
@@ -118,7 +118,7 @@ const item: Variants = {
                         {/* Right Top (full width of right side) */}
                         <motion.div
                             variants={item}
-                            className="col-span-6 relative h-44 sm:h-44 overflow-hidden"
+                            className="col-span-6 relative h-32 sm:h-44 overflow-hidden"
                         >
                             <Image
                                 src="/product/p-4.png"
@@ -131,7 +131,7 @@ const item: Variants = {
                         {/* Right Bottom (split into 2 columns) */}
                         <motion.div
                             variants={item}
-                            className="col-span-3 relative h-40 overflow-hidden"
+                            className="col-span-3 relative h-28 sm:h-40 overflow-hidden"
                         >
                             <Image
                                 src="/product/p-5.png"
@@ -143,7 +143,7 @@ const item: Variants = {
 
                         <motion.div
                             variants={item}
-                            className="col-span-3 relative h-40 overflow-hidden"
+                            className="col-span-3 relative h-28 sm:h-40 overflow-hidden"
                         >
                             <Image
                                 src="/product/p-6.png"

@@ -5,8 +5,8 @@ import { motion } from "framer-motion";
 
 export default function Sectionsecond() {
   return (
-    <section className="relative bg-[#FAFAF2] py-16 px-4 sm:py-20 sm:px-6 flex w-full overflow-hidden">
-      <div className="max-w-7xl flex flex-col lg:flex-row w-full mx-auto relative">
+    <section className="relative py-16 px-4 sm:py-20 sm:px-6 flex w-full overflow-x-hidden">
+      <div className="max-w-6xl flex flex-col lg:flex-row w-full mx-auto relative">
         <div className="w-full relative">
           {/* Top Row */}
           <motion.div
@@ -19,22 +19,30 @@ export default function Sectionsecond() {
               delay: 0.4,
             }}
             viewport={{ once: true, amount: 0.3 }}
-            className="flex flex-col sm:flex-row items-center sm:items-end sm:space-x-6 text-center sm:text-left"
+            className="flex flex-col sm:flex-row items-center sm:items-end sm:space-x-6 text-center sm:text-left relative"
           >
-            <h2 className="text-green-800 font-bold text-5xl sm:text-[110px] leading-tight fractul-medium mb-4 sm:mb-0">
+            {/* Desktop Heading */}
+            <h2 className="hidden sm:block text-[#007746] font-bold text-5xl sm:text-[110px] leading-tight fractul-medium sm:mb-4">
               We are a
             </h2>
 
-            <div className="w-[250px] sm:w-[505px] h-auto mb-4 sm:mb-0">
+            {/* Image Container */}
+            <div className="relative w-full sm:w-[505px] h-auto mb-4 sm:mb-0">
               <Image
                 src="/2-1.png"
                 alt="Basket of veggies"
-                width={200}
+                width={1000}
                 height={0}
                 className="h-auto w-full object-contain"
               />
+
+              {/* Mobile Heading absolute inside image */}
+              <h2 className="block sm:hidden absolute top-2 right-5 text-[#007746] font-bold text-5xl leading-tight fractul-medium">
+                We are a
+              </h2>
             </div>
           </motion.div>
+
 
           {/* Right Column */}
           <motion.div
@@ -47,7 +55,8 @@ export default function Sectionsecond() {
               delay: 0.6,
             }}
             viewport={{ once: true, amount: 0.3 }}
-            className="relative flex flex-col sm:flex-row flex-1 items-center sm:items-center justify-center sm:justify-end sm:space-x-6 mt-8 sm:mt-0 sm:ms-[100px] text-center sm:text-left me-[100px]"
+            className="hidden sm:flex flex-1 items-center justify-end sm:space-x-6 mt-8 sm:mt-0 sm:ms-[100px] me-[100px] text-left"
+
           >
             {/* Circle Image */}
             <motion.div
@@ -67,11 +76,12 @@ export default function Sectionsecond() {
                 alt="Circle hand"
                 fill
                 className="object-cover"
+                quality={100}
               />
             </motion.div>
 
             <div>
-              <h2 className="text-green-800 font-bold text-5xl sm:text-[110px] leading-tight fractul-medium">
+              <h2 className="text-[#007746] font-bold text-5xl sm:text-[110px] leading-tight fractul-medium">
                 quiet rebellion
               </h2>
 
@@ -82,6 +92,61 @@ export default function Sectionsecond() {
               </p>
             </div>
           </motion.div>
+
+
+          <motion.div
+            initial={{ y: 60, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{
+              type: "spring",
+              stiffness: 260,
+              damping: 18,
+              delay: 0.4,
+            }}
+            viewport={{ once: true, amount: 0.3 }}
+            className="flex sm:hidden flex-col items-center justify-center px-1 text-center space-y-6 w-full"
+          >
+            {/* Heading */}
+            <h2 className="text-[#007746] font-bold text-5xl leading-tight fractul-medium w-full">
+              quiet rebellion
+            </h2>
+
+            {/* Row: Image + Paragraph */}
+            <div className="flex w-full items-center justify-center gap-4">
+              {/* Circle Image - 40% */}
+              <motion.div
+                initial={{ scale: 0.85, opacity: 0 }}
+                whileInView={{ scale: 1, opacity: 1 }}
+                transition={{
+                  type: "spring",
+                  stiffness: 280,
+                  damping: 14,
+                  delay: 0.6,
+                }}
+                viewport={{ once: true, amount: 0.3 }}
+                className="relative w-2/5 aspect-square rounded-full overflow-hidden shadow-lg flex-shrink-0"
+              >
+                <Image
+                  src="/2-2.png"
+                  alt="Circle hand"
+                  fill
+                  className="object-cover"
+                  quality={100}
+                />
+              </motion.div>
+
+              {/* Paragraph - 60% */}
+              <p className="text-sm sm:text-base text-[#004728] fractul-light text-left w-3/5">
+                Because we are choosing the harder, slower, cleaner path.
+                <br />
+                As health should not come with a chemical label.
+              </p>
+            </div>
+          </motion.div>
+
+
+
+
         </div>
 
         {/* Zigzag image */}
@@ -95,7 +160,7 @@ export default function Sectionsecond() {
             delay: 0.8,
           }}
           viewport={{ once: true, amount: 0.2 }}
-          className="absolute right-2 sm:right-0 bottom-0 w-[220px] sm:w-[335px] h-[180px] sm:h-[260px] z-50"
+          className="hidden sm:absolute sm:right-0 bottom-0 sm:flex w-[220px] sm:w-[335px] h-[180px] sm:h-[260px] z-50"
         >
           <Image
             src="/4.png"
@@ -104,6 +169,7 @@ export default function Sectionsecond() {
             className="object-contain sm:object-cover"
           />
         </motion.div>
+
       </div>
     </section>
   );

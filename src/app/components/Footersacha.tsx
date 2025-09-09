@@ -6,9 +6,9 @@ import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 
 export default function Footersacha() {
   return (
-    <footer className="relative bg-[#FDA71B] text-white overflow-hidden h-[480px]">
+    <footer className="relative bg-[#FDA71B] text-white overflow-hidden h-[600px]">
   {/* Full-width background image */}
-  <div className="absolute w-full bottom-0 z-10 h-[300px]">
+  <div className="absolute w-full bottom-0 z-10 h-[90px] sm:h-[250px]">
     <Image
       src="/product/foo.png"
       alt="Wellness Image"
@@ -18,7 +18,7 @@ export default function Footersacha() {
     />
   </div>
 
-  <div className="relative max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-3 gap-12 items-center py-16 px-4 sm:py-20 sm:px-6">
+  <div className="relative max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-3 gap-12 items-center py-12 px-4 sm:py-20 sm:px-6">
     
     {/* Left Side - Logo */}
     <motion.div 
@@ -42,39 +42,39 @@ export default function Footersacha() {
 
     {/* Center Side - Links + Social Icons */}
     <motion.div 
-      className="flex items-start gap-20"
+      className="flex items-start justify-between gap-10 sm:gap-20"
       initial={{ opacity: 0, y: 30 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, delay: 0.2 }}
       viewport={{ once: true }}
     >
-      <ul className="space-y-5 mb-6 fractul-light">
+      <ul className="space-y-5 mb-6 fractul-thin text-xl">
         <li><a href="#" className="hover:text-gray-200">Home</a></li>
         <li><a href="#" className="hover:text-gray-200">Shop By Category</a></li>
         <li><a href="#" className="hover:text-gray-200">Blogs</a></li>
       </ul>
 
-      <ul className="space-y-5 mb-6 fractul-light">
+      <ul className="space-y-5 mb-6 fractul-thin text-xl">
         <li><a href="#" className="hover:text-gray-200">Resources</a></li>
         <li><a href="#" className="hover:text-gray-200">Contact Us</a></li>
         <div className="flex gap-4 pt-3">
-          {[
-            { icon: <FaLinkedinIn />, label: "LinkedIn" },
-            { icon: <FaFacebookF />, label: "Facebook" },
-            { icon: <FaInstagram />, label: "Instagram" },
-          ].map((item, i) => (
-            <motion.a
-              key={i}
-              href="#"
-              aria-label={item.label}
-              whileHover={{ scale: 1.2 }}
-              whileTap={{ scale: 0.9 }}
-              className="text-2xl text-[#FFE3E3] hover:text-gray-200 transition-colors duration-200"
-            >
-              {item.icon}
-            </motion.a>
-          ))}
-        </div>
+              {[
+                { icon: <FaLinkedinIn />, label: "LinkedIn" },
+                { icon: <FaFacebookF />, label: "Facebook" },
+                { icon: <FaInstagram />, label: "Instagram" },
+              ].map((item, i) => (
+                <motion.a
+                  key={i}
+                  href="#"
+                  aria-label={item.label}
+                  whileHover={{ scale: 1.2 }}
+                  whileTap={{ scale: 0.9 }}
+                  className="text-2xl text-[#FFE3E3] hover:text-gray-200 transition-colors duration-200"
+                >
+                  {item.icon}
+                </motion.a>
+              ))}
+            </div>
       </ul>
     </motion.div>
 
@@ -89,7 +89,7 @@ export default function Footersacha() {
       <div className="w-full sm:w-72">
         <input
           type="email"
-          placeholder="Enter number"
+          placeholder="Enter Number"
           className="w-full bg-transparent border-b border-white focus:outline-none text-white placeholder-gray-200 py-2"
         />
       </div>

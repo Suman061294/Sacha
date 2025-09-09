@@ -37,13 +37,13 @@ export default function Footer() {
           transition={{ duration: 0.6, delay: 0.2 }}
           viewport={{ once: true }}
         >
-          <ul className="space-y-5 mb-6 fractul-light">
+          <ul className="space-y-5 mb-6 fractul-thin text-xl">
             <li><a href="#" className="hover:text-gray-200">Home</a></li>
             <li><a href="#" className="hover:text-gray-200">Shop By Category</a></li>
             <li><a href="#" className="hover:text-gray-200">Blogs</a></li>
           </ul>
 
-          <ul className="space-y-5 mb-6 fractul-light">
+          <ul className="space-y-5 mb-6 fractul-thin text-xl">
             <li><a href="#" className="hover:text-gray-200">Resources</a></li>
             <li><a href="#" className="hover:text-gray-200">Contact Us</a></li>
             <div className="flex gap-4 pt-3">
@@ -78,8 +78,8 @@ export default function Footer() {
           <div className="w-full sm:w-72">
             <input
               type="email"
-              placeholder="Enter number"
-              className="w-full bg-transparent border-b border-white focus:outline-none text-white placeholder-gray-200 py-2"
+              placeholder="Enter Number"
+              className="w-full bg-transparent border-b text-xl border-white focus:outline-none text-white placeholder-gray-200 py-2"
             />
           </div>
           <div className="text-left mt-4 sm:w-72">

@@ -5,12 +5,12 @@ import { motion } from "framer-motion";
 
 export default function Section5() {
   return (
-    <section className="relative py-16 px-4 sm:py-20 sm:px-6 overflow-x-hidden">
-      <div className="max-w-7xl mx-auto flex flex-col lg:flex-row justify-between items-center gap-12">
+    <section className="relative py-10 px-4 sm:py-20 sm:px-6 overflow-x-hidden">
+      <div className="max-w-7xl mx-auto flex flex-col lg:flex-row justify-between items-center gap-2 sm:gap-12">
         
         {/* Left Side Content (60%) */}
         <motion.div
-          className="relative w-full lg:w-[50%] h-[250px] sm:h-[400px] lg:h-[150px]"
+          className="relative w-full lg:w-[50%] h-[100px] sm:h-[250px] lg:h-[250px]"
           initial={{ x: -100, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
           transition={{
@@ -31,7 +31,7 @@ export default function Section5() {
 
         {/* Right Side Content (40%) */}
         <motion.div
-          className="relative w-full lg:w-[40%] h-[125px] sm:h-[200px] lg:h-[135px] flex items-center justify-center"
+          className="relative w-full lg:w-[40%] h-[135px] sm:h-[180px] lg:h-[135px] flex items-start justify-start"
           initial={{ x: 100, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
           transition={{
