@@ -34,7 +34,7 @@ const Sectionthree: React.FC<SectionthreeProps> = ({ backgroundImage }) => {
               delay: 0.2,
             }}
             viewport={{ once: true, amount: 0.4 }}
-            className="text-base sm:text-4xl font-semibold text-[#007746] mb-5 sm:mb-20 leading-relaxed fractul-medium"
+            className="text-xl sm:text-4xl font-semibold text-[#007746] mb-5 sm:mb-20 leading-relaxed fractul-medium"
           >
             Non Toxic, Pesticide Free, Clean & <br /> Transparent gifts from nature
           </motion.h2>
@@ -53,7 +53,7 @@ const Sectionthree: React.FC<SectionthreeProps> = ({ backgroundImage }) => {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             className="px-4 sm:px-6 md:px-8 py-2 sm:py-3 border-2 border-[#224936] rounded-xl 
-                       text-lg sm:text-lg md:text-3xl text-[#224936] font-medium 
+                       text-xl sm:text-lg md:text-3xl text-[#224936] font-medium 
                        hover:bg-[#224936] hover:text-white transition raf"
           >
             How we implement wellness?

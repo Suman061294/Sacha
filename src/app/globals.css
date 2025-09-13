@@ -109,9 +109,24 @@ body {
 }
 
 .pro-gradient{
-  background: #F1EEE5;
-background: linear-gradient(51deg, rgba(241, 238, 229, 1) 0%, rgba(255, 255, 255, 1) 60%, rgba(212, 210, 203, 1) 100%);
+  background: #E0DFDB;
+background: linear-gradient(264deg, rgba(224, 223, 219, 1) 21%, rgba(255, 255, 255, 1) 50%, rgba(246, 244, 241, 1) 100%);
 }
+
+
+.pro-gradient1{
+  background: #F1EEE5;
+  background: linear-gradient(51deg, #f3f0e8 0%, #fff 60%, #f3f0e8 100%);
+}
+
+
+.prog2 {
+    background: linear-gradient(51deg, #f3f0e8 0%, #f3f0e8 60%, #f3f0e8 100%);
+}
+
+
+
+    
 
 
 @keyframes marquee {
@@ -132,5 +147,30 @@ background: linear-gradient(51deg, rgba(241, 238, 229, 1) 0%, rgba(255, 255, 255
 .animate-marquee-reverse {
   display: inline-flex;
   animation: marquee-reverse 20s linear infinite;
+}
+
+
+
+/* Smooth background animation */
+.bg-animated {
+  background: linear-gradient(-45deg, #fce7f3, #fef3c7, #e0e7ff, #f3e8ff);
+  background-size: 400% 400%;
+  animation: gradientShift 30s ease infinite;
+}
+
+@keyframes gradientShift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+/* Gradient text animation */
+@keyframes gradientText {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+.animate-gradient-text {
+  background-size: 200% 200%;
+  animation: gradientText 10s ease infinite;
 }
 

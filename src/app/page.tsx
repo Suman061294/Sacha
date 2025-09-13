@@ -4,7 +4,7 @@ import Image from "next/image";
 import Navbar from "./components/Navbar";
 import { motion } from "framer-motion";
 import { ArrowDown } from "lucide-react";
-import { useRef, useState, useEffect } from "react"; 
+import { useRef, useState, useEffect } from "react";
 import Sectionsecond from "./components/Sectionsecond";
 import Sectionfour from "./components/Sectionfour";
 import Sectionthree from "./components/Sectionthree";
@@ -14,6 +14,7 @@ import Sectionseven from "./components/Sectionseven";
 import Sectioneight from "./components/Sectioneight";
 import Footer from "./components/Footer";
 import Loader from "./components/Loader";
+import Sectionsixnew from "./components/Sectionsixnew";
 
 export default function Home() {
   const nextSectionRef = useRef<HTMLDivElement | null>(null);
@@ -27,7 +28,7 @@ export default function Home() {
 
   return (
     <>
-     <Loader />
+      <Loader />
       <div
         className="h-screen w-full bg-cover bg-top relative"
         style={{ backgroundImage: "url('/bg.jpg')" }}
@@ -93,8 +94,9 @@ export default function Home() {
 
       <Sectionthree backgroundImage="/3/123.png" />
       <Sectionfour />
-       <Sectionfive /> 
-      <Sectionsix />
+      <Sectionfive />
+      {/* <Sectionsix /> */}
+      <Sectionsixnew />
       <Sectionseven />
       <Sectioneight />
       <Footer />

@@ -22,9 +22,9 @@ export default function Section4() {
       {/* ---------------- DESKTOP VERSION ---------------- */}
       <section
         ref={ref}
-        className="hidden md:flex relative min-h-[200vh] py-10 overflow-hidden flex-col justify-between"
+        className="hidden md:flex relative min-h-[200vh] pt-30 overflow-hidden flex-col justify-between pro-gradient"
       >
-        <div className="text-center fractul-light text-[#224936] text-3xl sm:text-4xl md:text-5xl leading-tight mt-12">
+        <div className="text-center fractul-light text-[#224936] text-3xl sm:text-4xl md:text-5xl leading-tight mt-12 mb-20">
           Avoid drinking{" "}
           <span className="fractul-medium uppercase">
             <em>pesticides</em>
@@ -56,8 +56,8 @@ export default function Section4() {
                   <Image
                     src="/3/product.png"
                     alt="Product"
-                    width={350}
-                    height={350}
+                    width={300}
+                    height={300}
                     className="object-contain"
                     priority
                   />
@@ -150,7 +150,7 @@ export default function Section4() {
         <div className="relative w-full h-[280px] flex items-center justify-center overflow-hidden bg-transparent mt-[-120px]">
           {/* First marquee */}
           <div className="absolute w-full rotate-[-4deg]">
-            <div className="whitespace-nowrap flex animate-marquee text-4xl sm:text-5xl font-bold text-[#FDA71B] bg-white fractul-light uppercase py-4">
+            <div className="whitespace-nowrap flex animate-marquee text-4xl sm:text-5xl font-bold text-[#FDA71B] bg-[#F3F0E8] fractul-light uppercase py-4">
               <span className="mx-6">
                 100% ORGANIC . ZERO BULLSHIT . 100% ORGANIC . ZERO BULLSHIT .
               </span>
@@ -162,7 +162,7 @@ export default function Section4() {
 
           {/* Second marquee */}
           <div className="absolute w-full rotate-[4deg]">
-            <div className="whitespace-nowrap flex animate-marquee-reverse text-4xl sm:text-5xl font-bold text-[#FDA71B] bg-white fractul-light uppercase py-4">
+            <div className="whitespace-nowrap flex animate-marquee-reverse text-4xl sm:text-5xl font-bold text-[#FDA71B] bg-[#F3F0E8] fractul-light uppercase py-4">
               <span className="mx-6">
                 100% ORGANIC . ZERO BULLSHIT . 100% ORGANIC . ZERO BULLSHIT .
               </span>
@@ -234,12 +234,24 @@ export default function Section4() {
 
           </div>
         </div>
+
+
+        <section className="relative w-full h-[47px] overflow-hidden mt-10">
+          <Image
+            src="/product/br.png"
+            alt="Wellness Image"
+            fill
+            priority
+            className="object-cover"
+          />
+        </section>
+
       </section>
 
       {/* ---------------- MOBILE VERSION ---------------- */}
-     
 
-      <section className="block md:hidden px-0 pt-20 bg-white pro-gradient">
+
+      <section className="block md:hidden px-0 pt-20 mt-[-20px] bg-white pro-gradient">
         {/* Title */}
         <motion.h2
           initial={{ opacity: 0, y: 50 }}
@@ -336,21 +348,24 @@ export default function Section4() {
             <div className="h-1/2 bg-transparent" />
             <div className="h-1/2 bg-[#FDA71B]" />
           </div>
-          <motion.h1
-            initial={{ opacity: 0, y: 100, scale: 0.8 }}
-            whileInView={{ opacity: 1, y: 0, scale: 1 }}
-            transition={{ type: "spring", stiffness: 120, damping: 10 }}
-            className="relative text-[65px] font-bold text-center text-[#224936] fractul-bold uppercase"
-          >
-            <em>TRUTHFUL</em>
-          </motion.h1>
+          <h1 className="relative text-[65px] font-bold text-center text-[#224936] fractul-bold uppercase">
+            <motion.em
+              initial={{ opacity: 0, y: 100, scale: 0.8 }}
+              whileInView={{ opacity: 1, y: 0, scale: 1 }}
+              transition={{ type: "spring", stiffness: 120, damping: 10 }}
+              className=""
+            >
+              TRUTHFUL
+            </motion.em>
+          </h1>
+
         </div>
 
         {/* Marquee + Image Section */}
         <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ type: "spring", stiffness: 120, damping: 12 }}
+          // initial={{ opacity: 0, y: 50 }}
+          // whileInView={{ opacity: 1, y: 0 }}
+          // transition={{ type: "spring", stiffness: 120, damping: 12 }}
           className="relative w-full mt-[-5px] overflow-hidden"
         >
           <div className="bg-[#FDA71B] flex justify-center pb-0">
@@ -363,7 +378,7 @@ export default function Section4() {
             />
           </div>
           {/* Marquee Section (unchanged) */}
-          <div className="relative w-full h-[165px] overflow-hidden bg-white">
+          <div className="relative w-full h-[165px] overflow-hidden">
             <div className="absolute top-0 left-0 w-full h-1/2 bg-[#FDA71B] z-0"></div>
             <div className="absolute bottom-0 left-0 w-full h-1/2 z-0"></div>
             <div className="absolute w-full rotate-[3deg] top-[25px] z-10">
@@ -395,7 +410,7 @@ export default function Section4() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ type: "spring", stiffness: 130, damping: 10 }}
         >
-          <div className="flex md:hidden items-start justify-between pt-0 px-4 bg-white">
+          <div className="flex md:hidden items-start justify-between pt-0 px-4">
             <div className="w-1/2 flex justify-center">
               <Image
                 src="/3/product.png"
@@ -427,7 +442,7 @@ export default function Section4() {
             </div>
           </div>
 
-          <div className="flex justify-center bg-white mt-[-32px] ps-[78px] pb-10">
+          <div className="flex justify-center mt-[-15px] ps-[78px] pb-10">
             <Image
               src="/product/bubble2.png"
               alt="Product"
@@ -437,6 +452,17 @@ export default function Section4() {
             />
           </div>
         </motion.div>
+
+
+        <section className="relative w-full h-[40px] overflow-hidden mt-10">
+          <Image
+            src="/product/br.png"
+            alt="Wellness Image"
+            fill
+            priority
+            className="object-cover"
+          />
+        </section>
       </section>
 
     </>

@@ -17,13 +17,13 @@ import Loadersacha from "../components/Loadersacha";
 export default function Home() {
     return (
         <>
-        <Loadersacha />
-        <div className="pro-gradient">
-            <div className="w-full min-h-[40vh] sm:min-h-screen bg-[#F3F0E8] flex flex-col">
-                {/* Navbar stays on top */}
+            <Loadersacha />
+            <div className="bg-[#F3F0E8]">
+                {/* <div className="w-full min-h-[40vh] sm:min-h-screen bg-[#F3F0E8] flex flex-col">
+          
                 <Navbarlight />
 
-                {/* Full-height responsive image container */}
+       
                 <div className="flex-1 flex items-center justify-center mt-20">
                     <div className="relative w-[100%] h-auto aspect-[16/9]">
                         <Image
@@ -35,26 +35,53 @@ export default function Home() {
                         />
                     </div>
                 </div>
-            </div>
+            </div> */}
+
+                <section className="relative w-full h-[130vh] overflow-hidden bg-[#F3F0E8]">
+                    <Navbarlight />
+
+                    <picture>
+                        {/* Mobile Image */}
+                        <source srcSet="/product/1-mob.png" media="(max-width: 768px)" />
+
+                        {/* Desktop Image */}
+                        <Image
+                            src="/product/1.png"
+                            alt="Wellness Image"
+                            fill
+                            priority
+                            className="object-cover"
+                        />
+                    </picture>
+
+                    {/* Mobile Try Now button */}
+                    <div className="absolute bottom-20 left-1/2 transform -translate-x-1/2 sm:hidden">
+                        <button className="bg-[#224936] text-white px-6 py-3 font-semibold  fractul-light uppercase">
+                            Try Now
+                        </button>
+                    </div>
+                </section>
 
 
 
-            <Section2 />
-
-            <Section3 />
-
-            <Section4 />
 
 
-            <Seperator />
+                <Section2 />
 
-            <Section5 />
+                <Section3 />
 
-            <Section6 />
+                <Section4 />
 
-            <Section7 />
 
-            <Footersacha />
+                <Seperator />
+
+                <Section5 />
+
+                <Section6 />
+
+                <Section7 />
+
+                <Footersacha />
 
             </div>
 

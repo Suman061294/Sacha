@@ -48,13 +48,13 @@ export default function Footersacha() {
       transition={{ duration: 0.6, delay: 0.2 }}
       viewport={{ once: true }}
     >
-      <ul className="space-y-5 mb-6 fractul-thin text-xl">
+      <ul className="space-y-5 mb-6 fractul-thin  text-md sm:text-xl">
         <li><a href="#" className="hover:text-gray-200">Home</a></li>
         <li><a href="#" className="hover:text-gray-200">Shop By Category</a></li>
         <li><a href="#" className="hover:text-gray-200">Blogs</a></li>
       </ul>
 
-      <ul className="space-y-5 mb-6 fractul-thin text-xl">
+      <ul className="space-y-5 mb-6 fractul-thin  text-md sm:text-xl">
         <li><a href="#" className="hover:text-gray-200">Resources</a></li>
         <li><a href="#" className="hover:text-gray-200">Contact Us</a></li>
         <div className="flex gap-4 pt-3">

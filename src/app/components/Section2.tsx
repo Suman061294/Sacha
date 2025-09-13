@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 
 export default function Section2() {
   return (
-    <section className="relative bg-[#F3F0E8] py-12 px-4 sm:py-20 sm:px-6 overflow-x-hidden">
+    <section className="relative bg-[#F3F0E8] py-12 px-4 sm:py-40 sm:px-6 overflow-x-hidden">
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
 
         {/* Left Side Content */}
@@ -44,7 +44,7 @@ export default function Section2() {
 
         {/* Right Side Image */}
         <motion.div
-          className="relative w-full h-[220px] sm:h-[480px] order-2"
+          className="relative w-full h-[220px] sm:h-[410px] order-2"
           initial={{ scale: 0.9, opacity: 0 }}
           whileInView={{ scale: 1, opacity: 1 }}
           transition={{
@@ -60,6 +60,7 @@ export default function Section2() {
             src="/product/2-1.png"
             alt="Wellness Image"
             fill
+            quality={100}
             className="object-cover rounded-lg"
           />
         </motion.div>

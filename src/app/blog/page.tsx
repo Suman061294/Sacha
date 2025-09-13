@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useRef, useState } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import Footer from "../components/Footer";
@@ -82,6 +82,9 @@ const blogPosts = [
 ];
 
 export default function BlogPage() {
+  const blogRef = useRef<HTMLDivElement>(null);
+
+
   const [activeCategory, setActiveCategory] = useState("All");
 
   const filteredPosts =
@@ -92,49 +95,62 @@ export default function BlogPage() {
   return (
     <div className="min-h-screen bg-white text-zinc-800">
       {/* 🚀 Hero Section */}
-      <div className="relative h-screen flex flex-col items-center justify-center overflow-hidden bg-gradient-to-br from-purple-100 via-pink-50 to-yellow-100">
-       <Navbarlight />
+      <div className="relative min-h-[85vh] sm:min-h-screen flex flex-col items-center justify-center overflow-hidden px-4 bg-animated">
+        <Navbarlight />
+
+        {/* Floating Light Blobs */}
         <motion.div
-          className="absolute w-72 h-72 bg-purple-300 rounded-full blur-3xl opacity-30"
+          className="absolute w-72 h-72 bg-purple-300 rounded-full blur-3xl opacity-20"
           animate={{ y: [0, 40, 0] }}
-          transition={{ duration: 6, repeat: Infinity }}
-          style={{ top: "10%", left: "5%" }}
+          transition={{ duration: 12, repeat: Infinity }}
+          style={{ top: "10%", left: "8%" }}
         />
         <motion.div
-          className="absolute w-96 h-96 bg-yellow-300 rounded-full blur-3xl opacity-30"
+          className="absolute w-96 h-96 bg-yellow-300 rounded-full blur-3xl opacity-20"
           animate={{ y: [0, -30, 0] }}
-          transition={{ duration: 8, repeat: Infinity }}
-          style={{ bottom: "10%", right: "10%" }}
+          transition={{ duration: 14, repeat: Infinity }}
+          style={{ bottom: "12%", right: "10%" }}
         />
 
-        {/* Text Content */}
+        {/* Headline */}
         <motion.h1
-          className="text-4xl sm:text-6xl font-extrabold text-[#224936] text-center max-w-2xl leading-tight z-10"
+          className="text-center font-extrabold fractul-light text-[#224936] leading-tight z-10 mt-12 
+               text-4xl sm:text-6xl lg:text-7xl max-w-2xl tracking-tight drop-shadow-lg"
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
         >
-          Sip, Savor, Discover {" "}
-          <span className="text-[#FDA71B]">The World of Tea Awaits</span>
+          Sip, Savor, Discover <br />
+          <span className="fractul-medium bg-gradient-to-r from-[#FDA71B] via-[#FF7E5F] to-[#FDA71B] bg-clip-text text-transparent animate-gradient-text">
+            The World of Tea Awaits
+          </span>
         </motion.h1>
 
+        {/* Subtitle */}
         <motion.p
-          className="mt-6 text-lg sm:text-xl text-zinc-600 max-w-xl text-center z-10"
+          className="mt-6 text-lg sm:text-xl lg:text-2xl text-zinc-700 text-center z-10 fractul-thin max-w-xl drop-shadow-sm"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.5 }}
         >
-          From delicate white teas to robust black blends, explore brewing tips, health benefits, and the stories behind every cup.
+          From delicate white teas to robust black blends, explore brewing tips,<br className="hidden sm:block" />
+          health benefits, and the stories behind every cup.
         </motion.p>
 
+        {/* CTA Button */}
         <motion.button
-          className="mt-8 px-6 py-3 bg-[#224936] text-white rounded-full font-medium shadow-lg hover:bg-purple-700 transition z-10"
-          whileHover={{ scale: 1.05 }}
+          className="mt-8 px-8 py-4 bg-[#224936] text-white rounded-full font-medium shadow-xl 
+             hover:bg-[#163026] transition z-10 text-lg sm:text-xl tracking-wide fractul-light"
+          whileHover={{ scale: 1.08 }}
           whileTap={{ scale: 0.95 }}
+          onClick={() => blogRef.current?.scrollIntoView({ behavior: "smooth" })}
         >
           Get Started
         </motion.button>
+
       </div>
+
+
 
       {/* 🚀 Blog Section */}
       <div className="max-w-6xl mx-auto px-4 py-16">
@@ -149,11 +165,10 @@ export default function BlogPage() {
             <button
               key={cat}
               onClick={() => setActiveCategory(cat)}
-              className={`px-3 py-1 rounded-full transition ${
-                activeCategory === cat
-                  ? "bg-purple-600 text-white"
-                  : "bg-zinc-100 hover:bg-zinc-200"
-              }`}
+              className={`px-3 py-1 rounded-full transition ${activeCategory === cat
+                ? "bg-purple-600 text-white"
+                : "bg-zinc-100 hover:bg-zinc-200"
+                }`}
             >
               {cat}
             </button>
@@ -161,7 +176,7 @@ export default function BlogPage() {
         </motion.div>
 
         {/* Masonry Grid */}
-        <motion.div
+        <motion.div ref={blogRef}
           className="columns-1 sm:columns-2 lg:columns-3 gap-6 space-y-6"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
@@ -200,6 +215,6 @@ export default function BlogPage() {
 
       <Footer />
     </div>
-    
+
   );
 }
